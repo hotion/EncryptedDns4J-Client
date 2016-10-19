@@ -1,5 +1,5 @@
 # EncryptedDns4J-Client
- DNS防污染客户端，配合服务端EncryptedDns4J-Server实现DNS的无污染解析。  
+ DNS防污染客户端，配合服务端 [EncryptedDns4J-Server](https://github.com/snail007/EncryptedDns4J-Server) 实现DNS的无污染解析。  
   
 # Requirement
 Linux  
