@@ -29,7 +29,7 @@ public class ConnectionManager {
 			@Override
 			protected void initChannel(SocketChannel ch) throws Exception {
 				ch.pipeline().addLast(
-					new ObjectDecoder(1024 >> 2, ClassResolvers
+					new ObjectDecoder(1024 * 1024, ClassResolvers
 						.cacheDisabled(getClass().getClassLoader())));
 				ch.pipeline().addLast(new ObjectEncoder());
 				ch.pipeline().addLast(callback);
