@@ -10,6 +10,11 @@ import io.netty.channel.socket.nio.NioDatagramChannel;
 public final class DnsServer {
 	
 	public static void main(String[] args) throws Exception {
+		if (args.length == 1) {
+			Cfg.setPrePath(args[0]);
+		} else {
+			Cfg.setPrePath("development");
+		}
 		io.netty.util.internal.logging.InternalLoggerFactory.setDefaultFactory(new io.netty.util.internal.logging.JdkLoggerFactory());
 		EventLoopGroup group = new NioEventLoopGroup();
 		try {
