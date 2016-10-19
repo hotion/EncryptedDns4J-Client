@@ -37,7 +37,7 @@ public class DnsServerHandler extends SimpleChannelInboundHandler<DatagramPacket
 				}
 			});
 		} catch (Exception e) {
-			Log.logger().error("xxxx", ExceptionUtil.exceptionChainToString(e));
+			Log.logger().error(ExceptionUtil.exceptionChainToString(e));
 		}
 	}
 

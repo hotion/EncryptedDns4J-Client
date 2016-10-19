@@ -33,7 +33,7 @@ public class ConnectionManager {
 						.cacheDisabled(getClass().getClassLoader())));
 				ch.pipeline().addLast(new ObjectEncoder());
 				ch.pipeline().addLast(callback);
-				Log.logger().debug("reply from : " + dest);
+				Log.logger().debug("revceived from : " + dest);
 			}
 		});
 
