@@ -6,6 +6,7 @@
 package com.snail.dnslb4j.util;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 
 /**
  *
@@ -18,5 +19,9 @@ public class Misc {
 		int readerIndex = buf.readerIndex();
 		buf.getBytes(readerIndex, bytes);
 		return bytes;
+	}
+
+	public static ByteBuf bytes2ByteBuf(byte[] bytes) {
+		return Unpooled.copiedBuffer(bytes);
 	}
 }
